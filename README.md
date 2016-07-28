@@ -173,20 +173,6 @@ export default class gesturePasswordDemo extends Component {
 
 ## Props
 
-pointBackgroundColor: PropTypes.string,
-gestureAreaLength: PropTypes.number,
-color: PropTypes.color,
-activeColor: PropTypes.color,
-warningColor: PropTypes.color,
-warningDuration: PropTypes.number,
-renderDescription: PropTypes.func,
-renderActions: PropTypes.func,
-isWarning: PropTypes.bool,
-showArrow: PropTypes.bool,
-allowCross: PropTypes.bool,
-onReset: PropTypes.func,
-onFinish: PropTypes.func,
-
 Prop                 | Type   | Optional | Default      | Description
 -------------------- | ------ | -------- | ------------ | -----------
 pointBackgroundColor | color  | Yes      | 'transparent'| determine bgcolor of gesture point
