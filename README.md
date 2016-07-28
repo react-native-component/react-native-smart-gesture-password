@@ -32,8 +32,8 @@ import {
     Dimensions,
 } from 'react-native'
 
-import GesturePassword from '../../react-native-smart-gesture-password'
-import Button from '../../react-native-smart-button'
+import GesturePassword from 'react-native-smart-gesture-password'
+import Button from 'react-native-smart-button'
 
 export default class gesturePasswordDemo extends Component {
 
