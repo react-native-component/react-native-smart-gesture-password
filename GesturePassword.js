@@ -50,9 +50,9 @@ export default class GesturePassword extends Component {
     static PropTypes = {
         pointBackgroundColor: PropTypes.string,
         gestureAreaLength: PropTypes.number,
-        color: PropTypes.color,
-        activeColor: PropTypes.color,
-        warningColor: PropTypes.color,
+        color: PropTypes.string,
+        activeColor: PropTypes.string,
+        warningColor: PropTypes.string,
         warningDuration: PropTypes.number,
         topComponent: PropTypes.element,
         bottomComponent: PropTypes.element,
