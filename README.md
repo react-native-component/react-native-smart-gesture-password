@@ -32,8 +32,8 @@ import {
     Dimensions,
 } from 'react-native'
 
-import GesturePassword from 'react-native-smart-gesture-password'
-import Button from 'react-native-smart-button'
+import GesturePassword from '../../react-native-smart-gesture-password'
+import Button from '../../react-native-smart-button'
 
 export default class gesturePasswordDemo extends Component {
 
@@ -66,8 +66,8 @@ export default class gesturePasswordDemo extends Component {
                 warningColor={'red'}
                 warningDuration={1500}
                 allowCross={true}
-                renderDescription={this._renderDescription}
-                renderActions={this._renderActions}
+                topComponent={this._renderDescription()}
+                bottomComponent={this._renderActions()}
                 onFinish={this._onFinish}
                 onReset={this._onReset}
             />
@@ -181,8 +181,8 @@ color                | color  | Yes      | '#A9A9A9'    | determine color of nor
 activeColor          | color  | Yes      | '#00AAEF'    | determine color of active gesture point
 warningColor         | color  | Yes      | 'red'        | determine color of warning gesture point
 warningDuration      | number | Yes      | 1500         | determine duration when gesture status is warning
-renderDescription    | func   | Yes      |              | determine the presentation above gesture area
-renderActions        | func   | Yes      |              | determine the presentation below gesture area
+topComponent         | element| Yes      |              | determine the presentation above gesture area
+bottomCompont        | element| Yes      |              | determine the presentation below gesture area
 isWarning            | bool   | Yes      | false        | determine gesture warning status
 showArrow            | bool   | Yes      | true         | determine whether show arrow in point
 allowCross           | bool   | Yes      | true         | determine whether allow a line cross a point
