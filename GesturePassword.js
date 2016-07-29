@@ -54,8 +54,8 @@ export default class GesturePassword extends Component {
         activeColor: PropTypes.color,
         warningColor: PropTypes.color,
         warningDuration: PropTypes.number,
-        renderDescription: PropTypes.func,
-        renderActions: PropTypes.func,
+        topComponent: PropTypes.element,
+        bottomComponent: PropTypes.element,
         isWarning: PropTypes.bool,
         showArrow: PropTypes.bool,
         allowCross: PropTypes.bool,
@@ -108,7 +108,7 @@ export default class GesturePassword extends Component {
     render () {
         return (
             <View style={[this.props.style, styles.container]} {...this._panResponder.panHandlers} >
-                {this._renderDescription()}
+                {this.props.topComponent}
                 <View onLayout={this._onLayout}
                       style={{
                           overflow: 'hidden',
@@ -119,7 +119,7 @@ export default class GesturePassword extends Component {
                     {this._renderPoints()}
                     {this.props.showArrow ? this._renderArrows() : null}
                 </View>
-                {this._renderActions()}
+                {this.props.bottomComponent}
             </View>
         )
     }
@@ -135,13 +135,6 @@ export default class GesturePassword extends Component {
         this._gestureAreaLeft = e.nativeEvent.layout.x
         this._gestureAreaTop = e.nativeEvent.layout.y
         this._initializePoints()
-    }
-
-    _renderDescription () {
-        if (this.props.renderDescription) {
-            return this.props.renderDescription()
-        }
-        return null
     }
 
     _renderArrows () {
@@ -204,13 +197,6 @@ export default class GesturePassword extends Component {
                     }}/>
             )
         })
-    }
-
-    _renderActions () {
-        if (this.props.renderActions) {
-            return this.props.renderActions()
-        }
-        return null
     }
 
     _initializePoints () {
