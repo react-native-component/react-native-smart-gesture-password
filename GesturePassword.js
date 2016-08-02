@@ -238,7 +238,8 @@ export default class GesturePassword extends Component {
     }
 
     _addSequence (index) {
-        if (~this._sequence.findIndex((item) => item === index)) {
+        //if (~this._sequence.findIndex((item) => item === index)) {
+        if (this._sequence.includes(index)) {
             return
         }
         this._sequence.push(index)
@@ -362,7 +363,8 @@ export default class GesturePassword extends Component {
                     return
                 }
 
-                if (~this._sequence.findIndex((item) => item === point.index)) {
+                //if (~this._sequence.findIndex((item) => item === point.index)) {
+                if (this._sequence.includes(point.index)) {
                     this._updateLine(this._currentPoint.origin, location)
                     return
                 }
