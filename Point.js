@@ -16,7 +16,7 @@ export default class Point extends Component {
         isWarning: false,
     }
 
-    static PropTypes = {
+    static propTypes = {
         index: PropTypes.number.isRequired,
         radius: PropTypes.number.isRequired,
         borderWidth: PropTypes.number.isRequired,

@@ -22,7 +22,7 @@ export default class Circle extends Component {
         backgroundColor: 'transparent',
     }
 
-    static PropTypes = {
+    static propTypes = {
         isFill: PropTypes.bool,
         color: PropTypes.string.isRequired,
         radius: PropTypes.number.isRequired,

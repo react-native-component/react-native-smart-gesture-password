@@ -21,7 +21,7 @@ export default class Arrow extends Component {
         vertexDeg: 90,
     }
 
-    static PropTypes = {
+    static propTypes = {
         vertexDeg: PropTypes.number,
         start: PropTypes.shape({
             x: PropTypes.number.isRequired,

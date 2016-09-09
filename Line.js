@@ -21,7 +21,7 @@ export default class Line extends Component {
         lineWidth: 1,
     }
 
-    static PropTypes = {
+    static propTypes = {
         color: PropTypes.string.isRequired,
         lineWidth: PropTypes.number,
         start: PropTypes.shape({

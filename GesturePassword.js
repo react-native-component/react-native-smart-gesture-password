@@ -47,7 +47,7 @@ export default class GesturePassword extends Component {
         allowCross: true,
     }
 
-    static PropTypes = {
+    static propTypes = {
         pointBackgroundColor: PropTypes.string,
         gestureAreaLength: PropTypes.number,
         color: PropTypes.string,
