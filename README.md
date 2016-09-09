@@ -15,6 +15,10 @@ This component is compatible with React Native 0.25 and newer.
 npm install react-native-smart-gesture-password --save
 ```
 
+## Full Demo
+
+see [ReactNativeComponentDemos][0]
+
 ## Usage
 
 Install the GesturePassword from npm with `npm install react-native-smart-gesture-password --save`.
@@ -190,5 +194,6 @@ onStart              | func   | Yes      |              | determine the listener
 onReset              | func   | Yes      |              | determine the listener which is called after gesture is reseted
 onFinish             | func   | Yes      |              | determine the listener which is called after gesture actions is finished
 
+[0]: https://github.com/cyqresig/ReactNativeComponentDemos
 [1]: http://cyqresig.github.io/img/react-native-smart-gesture-password-preview-ios-v1.0.0.gif
 [2]: http://cyqresig.github.io/img/react-native-smart-gesture-password-preview-android-v1.0.0.gif
