@@ -1,4 +1,10 @@
 # react-native-smart-gesture-password
+
+[![npm](https://img.shields.io/npm/v/react-native-smart-gesture-password.svg)](https://www.npmjs.com/package/react-native-smart-gesture-password)
+[![npm](https://img.shields.io/npm/dm/react-native-smart-gesture-password.svg)](https://www.npmjs.com/package/react-native-smart-gesture-password)
+[![npm](https://img.shields.io/npm/dt/react-native-smart-gesture-password.svg)](https://www.npmjs.com/package/react-native-smart-gesture-password)
+[![npm](https://img.shields.io/npm/l/react-native-smart-gesture-password.svg)](https://github.com/react-native-component/react-native-smart-gesture-password/blob/master/LICENSE)
+
 A smart gesture password locker for react-native apps, written in JS for cross-platform support.
 It works on iOS and Android.
 
