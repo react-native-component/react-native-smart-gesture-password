@@ -48,6 +48,7 @@ export default class GesturePassword extends Component {
     }
 
     static propTypes = {
+        lineWidth: PropTypes.number,
         pointBackgroundColor: PropTypes.string,
         gestureAreaLength: PropTypes.number,
         color: PropTypes.string,
@@ -187,6 +188,7 @@ export default class GesturePassword extends Component {
                 <Line
                     key={'line-' + index}
                     color={line.color}
+                    lineWidth={this.props.lineWidth}
                     start={{
                         x: line.start.x - this._gestureAreaLeft,
                         y: line.start.y - this._gestureAreaTop,
