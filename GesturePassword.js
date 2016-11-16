@@ -110,14 +110,16 @@ export default class GesturePassword extends Component {
 
     render () {
         return (
-            <View style={[this.props.style, styles.container]} {...this._panResponder.panHandlers} >
+            <View style={[this.props.style, styles.container]}>
                 {this.props.topComponent}
-                <View onLayout={this._onLayout}
-                      style={{
-                          overflow: 'hidden',
-                          width: this.props.gestureAreaLength,
-                          height: this.props.gestureAreaLength,
-                          marginHorizontal: this._gestureAreaMarginHorizontal,}}>
+                <View
+                    {...this._panResponder.panHandlers}
+                    onLayout={this._onLayout}
+                    style={{
+                        overflow: 'hidden',
+                        width: this.props.gestureAreaLength,
+                        height: this.props.gestureAreaLength,
+                        marginHorizontal: this._gestureAreaMarginHorizontal,}}>
                     {this._renderLines()}
                     {this._renderPoints()}
                     {this.props.showArrow ? this._renderArrows() : null}
