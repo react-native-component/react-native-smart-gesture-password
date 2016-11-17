@@ -17,9 +17,9 @@ const styles = StyleSheet.create({
 
 export default class Line extends Component {
 
-    static defaultProps = {
-        lineWidth: 1,
-    }
+    //static defaultProps = {
+    //    lineWidth: 1,
+    //}
 
     static propTypes = {
         color: PropTypes.string.isRequired,
@@ -51,7 +51,7 @@ export default class Line extends Component {
                     width: transform.distance,
                     height: this.props.lineWidth,
                     left: this.props.start.x,
-                    top: this.props.start.y - this.props.lineWidth/2,
+                    top: this.props.start.y - this.props.lineWidth / 2,
                     transform: [{translateX: transform.translateX},
                         {translateY: transform.translateY},
                         {rotateZ: transform.rotateRad + 'rad'}]
