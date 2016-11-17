@@ -36,10 +36,11 @@ const {width: deviceWidth, height: deviceHeight} = Dimensions.get('window')
 export default class GesturePassword extends Component {
 
     static defaultProps = {
+        lineWidth: 10,
         pointBackgroundColor: 'transparent',
         gestureAreaLength: 222,
         color: '#A9A9A9',
-        lineColor: '#A9A9A9',
+        //lineColor: '#A9A9A9',
         activeColor: '#00AAEF',
         warningColor: 'red',
         warningDuration: 0,
@@ -351,7 +352,7 @@ export default class GesturePassword extends Component {
                 let line = {
                     start: point.origin,
                     end: location,
-                    color: this.props.lineColor,
+                    color: this.props.lineColor || this.props.activeColor,
                 }
                 this._addLine(line)
                 this._currentLine = line
@@ -393,7 +394,7 @@ export default class GesturePassword extends Component {
                 let line = {
                     start: point.origin,
                     end: location,
-                    color: this.props.lineColor,
+                    color: this.props.lineColor || this.props.activeColor,
                 }
                 this._addLine(line)
                 this._currentLine = line
