@@ -39,6 +39,7 @@ export default class GesturePassword extends Component {
         pointBackgroundColor: 'transparent',
         gestureAreaLength: 222,
         color: '#A9A9A9',
+        lineColor: '#A9A9A9',
         activeColor: '#00AAEF',
         warningColor: 'red',
         warningDuration: 0,
@@ -48,9 +49,11 @@ export default class GesturePassword extends Component {
     }
 
     static propTypes = {
+        lineWidth: PropTypes.number,
         pointBackgroundColor: PropTypes.string,
         gestureAreaLength: PropTypes.number,
         color: PropTypes.string,
+        lineColor: PropTypes.string,
         activeColor: PropTypes.string,
         warningColor: PropTypes.string,
         warningDuration: PropTypes.number,
@@ -107,14 +110,16 @@ export default class GesturePassword extends Component {
 
     render () {
         return (
-            <View style={[this.props.style, styles.container]} {...this._panResponder.panHandlers} >
+            <View style={[this.props.style, styles.container]}>
                 {this.props.topComponent}
-                <View onLayout={this._onLayout}
-                      style={{
-                          overflow: 'hidden',
-                          width: this.props.gestureAreaLength,
-                          height: this.props.gestureAreaLength,
-                          marginHorizontal: this._gestureAreaMarginHorizontal,}}>
+                <View
+                    {...this._panResponder.panHandlers}
+                    onLayout={this._onLayout}
+                    style={{
+                        overflow: 'hidden',
+                        width: this.props.gestureAreaLength,
+                        height: this.props.gestureAreaLength,
+                        marginHorizontal: this._gestureAreaMarginHorizontal,}}>
                     {this._renderLines()}
                     {this._renderPoints()}
                     {this.props.showArrow ? this._renderArrows() : null}
@@ -187,6 +192,7 @@ export default class GesturePassword extends Component {
                 <Line
                     key={'line-' + index}
                     color={line.color}
+                    lineWidth={this.props.lineWidth}
                     start={{
                         x: line.start.x - this._gestureAreaLeft,
                         y: line.start.y - this._gestureAreaTop,
@@ -345,7 +351,7 @@ export default class GesturePassword extends Component {
                 let line = {
                     start: point.origin,
                     end: location,
-                    color: this.props.activeColor,
+                    color: this.props.lineColor,
                 }
                 this._addLine(line)
                 this._currentLine = line
@@ -387,7 +393,7 @@ export default class GesturePassword extends Component {
                 let line = {
                     start: point.origin,
                     end: location,
-                    color: this.props.activeColor,
+                    color: this.props.lineColor,
                 }
                 this._addLine(line)
                 this._currentLine = line

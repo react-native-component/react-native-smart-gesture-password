@@ -51,7 +51,7 @@ export default class Line extends Component {
                     width: transform.distance,
                     height: this.props.lineWidth,
                     left: this.props.start.x,
-                    top: this.props.start.y,
+                    top: this.props.start.y - this.props.lineWidth/2,
                     transform: [{translateX: transform.translateX},
                         {translateY: transform.translateY},
                         {rotateZ: transform.rotateRad + 'rad'}]
