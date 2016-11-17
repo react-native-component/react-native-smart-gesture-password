@@ -1,5 +1,5 @@
 {
-  "name": "@react-native-component/react-native-smart-gesture-password",
+  "name": "react-native-smart-gesture-password",
   "version": "2.1.0",
   "description": "A smart gesture password locker for react-native apps",
   "main": "GesturePassword.js",
